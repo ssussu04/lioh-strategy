@@ -581,7 +581,7 @@ else:
                     st.session_state.replay_cache=replay(r,exchange_rate=float(cfg['환율_KRW_USD']))
                     st.session_state.replay_mode_cache=(r['mode'],r.get('total_funding_MUSD'))
             st.plotly_chart(st.session_state.replay_cache,use_container_width=True,config={'displaylogo':False,'responsive':True})
-            st.info('아래 차트의 ▶ 재생을 누르면 지도·조달물량·적격비율·통합 현금잔액이 한 화면에서 월별로 동시에 바뀝니다. 가독성을 위해 그래프 내부의 상단 제목 겹침을 제거했습니다.')
+            st.info('아래 차트의 ▶ 재생을 누르면 지도·조달물량·적격비율·통합 현금잔액이 한 화면에서 월별로 동시에 바뀝니다.')
             st.caption('재생 컨트롤과 월 슬라이더로 지도·조달량·비PFE 비율·통합 현금잔액을 함께 확인할 수 있습니다. 월별 근거는 아래에서 별도 선택합니다.')
             st.markdown('<div class="section-title">선택의 흐름 · 기업별 조달과 공장 건설 간트차트</div>',unsafe_allow_html=True)
             st.plotly_chart(decision_gantt(r),use_container_width=True,config={'displaylogo':False})
